@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import dice from "../src/assets/icon-dice.svg"
+import line from "../src/assets/pattern-divider-desktop.svg"
 
 const AdviceCard = () => {
     const [advice, setadvice] = useState();
@@ -31,12 +33,12 @@ const AdviceCard = () => {
             <p className="text-2xl mb-3 md:text-3xl italic">
                 {loading ? "loading..." : `"${advice}"`}
             </p>
-            <img src="../src/assets/pattern-divider-desktop.svg" className="mx-auto mt-6 mb-7 "></img>
+            <img src= {line}className="mx-auto mt-6 mb-7 "></img>
             <button
                 className=" active:scale-90 hover:cursor-pointer bg-pink-800 p-4 rounded-full shadow-lg  hover:shadow-[0_0_40px_15px_pink]"
                 onClick={FetchAdvice}
             >
-                <img src="../src/assets/icon-dice.svg" alt="dice to roll"></img>
+                <img src={dice} alt="dice to roll"></img>
             </button>
 
         </div>
